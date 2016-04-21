@@ -1,0 +1,194 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/Todo.css">
+      <link rel="icon" href="data:;base64,iVBORwOKGgo=">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <header>
+             
+            <nav>
+                <div1 class="nav-wrapper green accent-3 ">
+                    <a href="#" class="brand-logo">Blog</a>
+                    <ul class="right active">
+                  
+  <li>
+      
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a href="index.html">Home<span class=" badge"></span></a></li>
+    <li><a href="tasks.html">post tasks<span class="badge"></span></a></li>
+    <li><a href="about.html">About<span class="badge"></span></a></li>
+  </ul>
+  <a class="btn dropdown-button" href="#!" data-activates="dropdown2">Menu<i class="mdi-navigation-arrow-drop-down right"></i></a>
+ 
+               
+	  </ul>
+	</div1>
+	<!--END SUB MENU-->
+
+    
+                        
+                    
+                        <a class="toggle-nav" href="#">&#9776;</a>
+              
+            </nav>
+        </header>
+        <main>
+       
+            <div class="container">
+                <div class="row">
+                    
+                </div>
+                <div class="row">
+                    <div class="col s12 main-container">
+                        
+                    </div>
+                </div>
+            </div>
+       <!--       <center>
+        <div id="wrapper">
+
+            <div id="first">
+                <img src="img/mamma.jpg"></img>
+                <h5>
+                Liana Gaughan, Instructor
+                <br>
+                <br>
+                MTAC Member<br>
+                <br>
+                Personalized Lessons<br>
+                <br>       
+                Certificate of Merit Test<br>
+                <br>
+                Ensemble Classes<br>
+                <br>
+                Recital Preparation
+                </h5>
+                <div id="second">
+
+
+                    <h3>Hello, students, parents and friends!</h3>
+                    <br>
+                    <br>
+                    <p> I am a professional violin teacher and performer based in the Pasadena, California area.
+                        <br>
+                        <br>
+                        Selecting the right teacher for your child is critically important because quality instruction gives students the opportunity to follow their love for music.
+                        As a result of my years of experience teaching violin, I have developed a truly unique teaching method unmatched by any other.
+                        <br>
+                        <br>
+                        Every student has different abilities and needs. I tailor my lesson plans to each student’s interests and goals.
+                        To find out more about me and my class scheduling, you are welcome to browse the pages of my website.
+                        Offering a Variety of Classes
+                        <br>
+                        <br>
+
+                        Individual Lessons – From Beginner to Advanced
+                        <br>
+                        <br>
+                        Group Lessons – Suzuki Method for Beginners
+                        <br>
+                        <br>
+                        Theory Class for Any Instrumental Students
+                        <br>
+                        <br>
+
+                    
+                        If you are looking for a violin teacher, 
+                        I would love to meet you and your child and answer any questions you might have. Please contact me by phone or email to set up an appointment for a free consultation.
+                    </p>
+                </div>
+            </div> 
+    </center> -->
+        </main>
+        <footer class="page-footer blue accent-3">
+            <div1 class="container" >
+                <p><a href="#" class="white">Back to the top</a></p>
+            </div1>
+            <div1 class="footer-copyright">
+                <div1 class="container">
+                    <span>@2016 Devin</span> 
+                </div1>
+            </div1>
+        </footer>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="libs/backendless.js"></script>
+      <script type="text/javascript" src="js/tasks.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+     
+      <script src="js/handlebars-v4.0.5.js" type="text/javascript"></script>
+      
+      <script id="login-template" type="text/x-handlebars-template">
+       <div class="col s6">
+          <h2 class="center-align">Login</h2>
+          <div>
+              <form class="col s12 form-signin">
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <input id="email" type="email" name="email" class="validate">
+                          <label for="email">Email</label>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <input id="password" type="password" name="password" class="validate">
+                          <label for="password">Password</label>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col s12">
+                          <p class="right-align">
+                              <button class="btn btn-large waves-effect waves-light" type="submit" name="action">Submit</button>
+                          </p>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+      </script>
+      <script id="welcome-template" type="text/x-handlebars-template">
+          <h2>Welcome, {{email}}</h2>
+          <button class="btn btn-large waves-effect waves-light add-blog">Add a new Blog</button>
+          <button class="btn btn-large waves-effect waves-light logout">Logout</button>
+      </script>
+      <script id="add-blog-template" type="text/x-handlebars-template">
+             <h2>Add a new Blog</h2>
+             
+      <div class="row">
+          <form class="col s12 form-add-blog">
+              <div class="row">
+                  <div class="input-field col s12">
+                      <input id="title" type="text" name="title">
+                      <label for="title">Add Title</label>
+                  </div>
+              </div>
+               <div class="row">
+               <h3>Add statement</h3>
+                  <div class="input-field col s12">
+                      <textarea id="content" name="content" class="materialize-textarea"></textarea>
+                      <label for="content"></label>
+                  </div>
+              </div>
+               <div class="row">
+                   <div class="col s12">
+                       <p class="right-align">
+                           <button class="btn btn-large waves-effect waves-light" type="submit" name="action">Submit</button>
+                       </p>
+                  </div>
+              </div>
+          </form>
+      </div>
+      </script>
+      
+    </body>
+  </html>
