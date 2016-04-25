@@ -13,6 +13,7 @@ $(function () {
         $('.main-container').html(loginTemplate);
     }
 
+
     $(document).on('submit', '.form-signin', function (event) {
         event.preventDefault();
 
