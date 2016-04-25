@@ -16,7 +16,9 @@ $(function () {
          posts: postsCollection.data
      };
      
-     
+     var removeElement = function(params) {
+  $("#" + defaults.taskId + params.id).remove();
+};
      
      Handlebars.registerHelper('format', function (time) {
          return moment(time).format("dddd, MMMM Do YYYY");
