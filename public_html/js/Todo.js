@@ -16,10 +16,6 @@ $(function () {
          posts: postsCollection.data
      };
      
-     var removeElement = function(params) {
-  $("#" + defaults.taskId + params.id).remove();
-};
-     
      Handlebars.registerHelper('format', function (time) {
          return moment(time).format("dddd, MMMM Do YYYY");
      });
@@ -39,3 +35,7 @@ function Posts(args) {
     this.content = args.content || "";
     this.authorEmail = args.authorEmail || "";
 }
+$(document).on('click', '.deleteA',function (event){
+    Backendless.Persistence.of(Posts).remove(event.target.attributes.data.nodeValue);
+    location.reload();
+});
