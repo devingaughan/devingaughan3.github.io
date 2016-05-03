@@ -37,5 +37,6 @@ function Posts(args) {
 }
 $(document).on('click', '.deleteA',function (event){
     Backendless.Persistence.of(Posts).remove(event.target.attributes.data.nodeValue);
-    location.reload();
+    Materialize.toast('Deleted', 2000) // 4000 is the duration of the toast
+       
 });

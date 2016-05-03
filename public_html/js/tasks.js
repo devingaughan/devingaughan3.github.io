@@ -61,7 +61,6 @@ $(function () {
 });
 
 
-
 $(document).on('click', '.logout', function () {
     Backendless.UserService.logout(new Backendless.Async(userLoggedOut, gotError));
 
@@ -71,12 +70,14 @@ $(document).on('click', '.logout', function () {
 });
 
 
+    
 function Posts(args) {
     args = args || {};
     this.title = args.title || "";
     this.content = args.content || "";
     this.authorEmail = args.authorEmail || "";
 }
+                                               
 
 function userLoggedIn(user) {
     console.log("user successfully logged in");
@@ -86,10 +87,11 @@ function userLoggedIn(user) {
     } else {
         userData = user;
     }
-    var welcomeScript = $('#welcome-template').html();
-    var welcomeTemplate = Handlebars.compile(welcomeScript);
-    var welcomeHTML = welcomeTemplate(userData);
-
+      
+   var welcomeScript = $('#welcome-template').html();
+ var welcomeTemplate = Handlebars.compile(welcomeScript);
+  var welcomeHTML = welcomeTemplate(userData);
+    
     $('.main-container').html(welcomeHTML);
 }
 function userLoggedOut() {
